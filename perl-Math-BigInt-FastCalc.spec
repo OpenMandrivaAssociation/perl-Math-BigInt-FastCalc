@@ -1,22 +1,21 @@
+%define upstream_name    Math-BigInt-FastCalc
+%define upstream_version 0.19
 
-%define realname   Math-BigInt-FastCalc
-%define version    0.19
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Math::BigInt::Calc with some XS for more speed
-Source:     http://www.cpan.org/modules/by-module/Math/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Math::BigInt)
 BuildRequires: perl(Test::More)
-
+BuildRequires: perl-devel
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 
 %description
@@ -30,7 +29,7 @@ follows the same API as this can be used instead by using the following:
 version like 'Pari'. To use this library:
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,5 +50,4 @@ rm -rf %buildroot
 %doc README CHANGES
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
