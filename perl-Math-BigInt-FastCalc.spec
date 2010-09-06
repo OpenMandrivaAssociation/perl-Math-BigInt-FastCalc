@@ -12,10 +12,11 @@ Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(ExtUtils::MakeMaker)
-BuildRequires: perl(Math::BigInt)
+BuildRequires: perl(Math::BigInt) >= 1.900.0
 BuildRequires: perl(Test::More)
+
 BuildRequires: perl-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 
 %description
@@ -36,7 +37,7 @@ version like 'Pari'. To use this library:
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
@@ -47,7 +48,6 @@ rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%doc README CHANGES
+%doc README CHANGES META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
