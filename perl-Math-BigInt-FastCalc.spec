@@ -13,6 +13,7 @@ Source0:    http://www.cpan.org/modules/by-module/Math/%{upstream_name}-%{upstre
 
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl-Math-BigInt >= 1.900.0
+BuildRequires: perl-Math-BigInt-Calc
 BuildRequires: perl(Test::More)
 
 BuildRequires: perl-devel
