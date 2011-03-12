@@ -1,9 +1,9 @@
 %define upstream_name    Math-BigInt-FastCalc
-%define upstream_version 0.26
+%define upstream_version 0.28
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:    Math::BigInt::Calc with some XS for more speed
 License:    GPL+ or Artistic
