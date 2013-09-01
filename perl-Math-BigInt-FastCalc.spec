@@ -2,14 +2,14 @@
 %define upstream_version 0.30
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 0.30
+Version:    %perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:    Math::BigInt::Calc with some XS for more speed
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Math/Math-BigInt-FastCalc-0.30.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Math/Math-BigInt-FastCalc-%{upstream_version}.tar.gz
 
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl-Math-BigInt >= 1.991
