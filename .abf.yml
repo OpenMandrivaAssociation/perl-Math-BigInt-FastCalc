@@ -1,2 +1,4 @@
+removed_sources:
+  Math-BigInt-FastCalc-0.29.tar.gz: ab4c1dac4331c018a247c229d2c25082671084d8
 sources:
-  "Math-BigInt-FastCalc-0.29.tar.gz": ab4c1dac4331c018a247c229d2c25082671084d8
+  Math-BigInt-FastCalc-0.30.tar.gz: a364793113a4f1f3b16e84511901cb361eb743a8

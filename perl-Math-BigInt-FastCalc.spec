@@ -1,15 +1,15 @@
 %define upstream_name    Math-BigInt-FastCalc
-%define upstream_version 0.29
+%define upstream_version 0.30
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:    Math::BigInt::Calc with some XS for more speed
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Math/Math-BigInt-FastCalc-%{upstream_version}.tar.gz
 
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl-Math-BigInt >= 1.991
@@ -103,4 +103,5 @@ rm -rf %buildroot
 
 * Mon May 11 2009 cpan2dist 0.19-1mdv
 - initial mdv release, generated with cpan2dist
+
 
