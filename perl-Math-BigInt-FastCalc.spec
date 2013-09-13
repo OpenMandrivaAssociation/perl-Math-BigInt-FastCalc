@@ -17,8 +17,6 @@ BuildRequires: perl(Math::BigInt::Calc) >= 0.56
 BuildRequires: perl(Test::More)
 
 BuildRequires: perl-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
-
 
 %description
 In order to allow for multiple big integer libraries, Math::BigInt was
@@ -41,14 +39,10 @@ version like 'Pari'. To use this library:
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc README CHANGES META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
