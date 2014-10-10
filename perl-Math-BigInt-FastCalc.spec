@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 
 Summary:    Math::BigInt::Calc with some XS for more speed
 
